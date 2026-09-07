@@ -1,0 +1,29 @@
+# Bimbo Location de Voitures
+
+> Agence de location de voitures basée à Chéraga, Alger, Algérie. Flotte répartie en quatre catégories : Économique, Berline, SUV et Luxe. Réservation en ligne, prise en charge en agence ou à l'aéroport d'Alger.
+
+Bimbo Location de Voitures propose une flotte entretenue régulièrement, à destination des particuliers (week-ends, trajets familiaux) et des professionnels (déplacements d'affaires, location récurrente) sur Alger et ses environs.
+
+## Pages
+
+- [Accueil](https://bimbo-cars.netlify.app/) — présentation de l'agence, véhicules mis en avant, témoignages clients
+- [Notre flotte](https://bimbo-cars.netlify.app/flotte.html) — catalogue complet des véhicules disponibles, filtrable par catégorie
+- [Réservation](https://bimbo-cars.netlify.app/reservation.html) — formulaire de demande de réservation en ligne
+- [Contact](https://bimbo-cars.netlify.app/contact.html) — adresse, téléphone, horaires, formulaire de contact
+
+## Catégories de véhicules
+
+- Économique : citadines (Dacia Sandero, Hyundai i10, Renault Clio)
+- Berline : véhicules familiaux ou professionnels (Hyundai Accent, Toyota Corolla, Skoda Octavia)
+- SUV : véhicules pour la route et la famille (Dacia Duster, Hyundai Tucson, Toyota RAV4)
+- Luxe : véhicules premium (Mercedes Classe C, BMW Série 3, Range Rover Evoque)
+
+## Coordonnées
+
+- Adresse : Route Nationale 11, Chéraga, Alger, Algérie
+- Téléphone : +213 555 12 34 56
+- Horaires : Lundi – Samedi, 08h00 – 18h00 (fermé le dimanche)
+
+## Notes pour les agents
+
+Les pages sous /admin/ sont un outil de gestion interne réservé à l'équipe et ne doivent pas être indexées ni citées comme contenu public du site (voir robots.txt).

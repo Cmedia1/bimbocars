@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de bord | Bimbo Location de Voitures</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body>
+
+  <!-- Login gate -->
+  <div class="admin-login">
+    <div class="admin-login__card">
+      <h1>Bimbo<span style="color:var(--a-gold)">Cars</span> — Admin</h1>
+      <p class="sub">Accès réservé à l'équipe Bimbo Location de Voitures.</p>
+      <p class="admin-login__error"></p>
+      <form id="admin-login-form" novalidate>
+        <div class="field">
+          <label for="admin-username">Identifiant</label>
+          <input type="text" id="admin-username" autocomplete="username" required>
+        </div>
+        <div class="field">
+          <label for="admin-password">Mot de passe</label>
+          <input type="password" id="admin-password" autocomplete="current-password" required>
+        </div>
+        <button type="submit" class="btn-admin btn-admin--gold" style="width:100%">Se connecter</button>
+      </form>
+      <p class="admin-login__hint">Démo MVP : identifiant <strong>admin</strong>, mot de passe <strong>bimbo2026</strong>. Cette authentification est côté client uniquement et ne doit pas être utilisée telle quelle en production.</p>
+    </div>
+  </div>
+
+  <!-- App shell -->
+  <div class="admin-app">
+    <aside class="admin-sidebar">
+      <p class="admin-sidebar__logo">Bimbo<span>Cars</span></p>
+      <ul class="admin-nav">
+        <li><button data-view="dashboard" class="is-active">Tableau de bord</button></li>
+        <li><button data-view="reservations">Réservations</button></li>
+        <li><button data-view="flotte">Flotte</button></li>
+      </ul>
+      <button class="admin-logout">Se déconnecter</button>
+    </aside>
+
+    <main class="admin-main">
+      <div class="admin-topbar">
+        <div>
+          <h1 id="topbar-title">Tableau de bord</h1>
+          <p>Vue d'ensemble de l'activité de réservation.</p>
+        </div>
+      </div>
+
+      <section id="view-dashboard" class="admin-view is-active">
+        <div class="stat-grid">
+          <div class="stat-card">
+            <p class="stat-card__label">Réservations totales</p>
+            <p class="stat-card__value" id="stat-total">0</p>
+          </div>
+          <div class="stat-card">
+            <p class="stat-card__label">En attente de confirmation</p>
+            <p class="stat-card__value" id="stat-pending">0</p>
+          </div>
+          <div class="stat-card">
+            <p class="stat-card__label">Véhicule le plus demandé</p>
+            <p class="stat-card__value" id="stat-top-vehicle" style="font-size:1.1rem">—</p>
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <h3>Réservations reçues — 7 derniers jours</h3>
+          <svg class="bar-chart" viewBox="0 0 560 190" role="img" aria-label="Nombre de réservations par jour sur les sept derniers jours"></svg>
+        </div>
+      </section>
+
+      <section id="view-reservations" class="admin-view">
+        <div class="table-card">
+          <div class="table-card__head">
+            <h3>Réservations soumises en ligne</h3>
+            <button id="export-csv" class="btn-admin">Exporter en CSV</button>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Référence</th>
+                <th>Client</th>
+                <th>Téléphone</th>
+                <th>Véhicule</th>
+                <th>Période</th>
+                <th>Statut</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="reservations-body"></tbody>
+          </table>
+          <p id="reservations-empty" class="empty-state">Aucune réservation pour le moment. Les demandes envoyées depuis le formulaire du site apparaîtront ici.</p>
+        </div>
+      </section>
+
+      <section id="view-flotte" class="admin-view">
+        <div class="fleet-admin-grid" id="fleet-admin-grid"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../assets/js/admin.js" type="module"></script>
+</body>
+</html>
